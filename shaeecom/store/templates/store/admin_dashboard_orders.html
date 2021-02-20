@@ -1,0 +1,54 @@
+{% extends 'store/admin_main.html' %}
+{% load static %}
+
+{% block content %}
+<div class = 'pagetitle'>
+<h5>List of Orders</h5>
+</div>
+
+
+<div class="container">
+    <div class="row">
+         
+      <div class="col-sm">
+        <h5>Transaction Number</h5>
+      </div>
+      
+      <div class="col-sm">
+        <h5>Customer Number</h5>
+      </div>
+      
+      <div class="col-sm">
+        <h5>Date of Purchase</h5>
+      </div>
+
+         
+      <div class="col-sm">
+        <h5></h5>
+      </div>
+
+    </div>
+  </div>
+
+{% for order in order %}
+<div class="container-lg">
+    <div class="row">
+      
+      <div class="col-sm">
+        {{ order.transaction_id }}
+      </div>
+      <div class="col-sm">
+        {{ order.customer }}
+      </div>
+      <div class="col-sm">
+        {{ order.date_ordered }}
+      </div>
+
+      <div class="col-sm">
+        <a class="btn btn-primary-sm" href="#" role="button">View</a>
+      </div> 
+
+    </div>
+  </div>
+{% endfor %}  
+{% endblock content %} 

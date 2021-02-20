@@ -1,0 +1,53 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container_product">
+  
+      
+        <div class="row">
+            <div class="col-md-4">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="{{product.imageURL}}" class="d-block w-100" alt="...">
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+
+
+            </div>
+            <div class="col-md-6">
+                <p class="newarrival text-center">NEW</p>
+                <h2><light>{{product.name}}</light></h2>
+                <br>
+                <h4 style="display: inline-block; float: left"><light>${{product.price|floatformat:2}}</light></h4>
+                <br>
+                <br>
+                <br>
+                <button style="display: inline-block; float: left" data-product="{{product.id}}" data-action="add" class="btn btn-outline-success add-btn update-cart">Add to Cart</button>
+                <a style="display: inline-block; float: right" class="btn btn-outline-success" href="{% url 'productdetail' product.id %}">View</a>
+                
+            </div>     
+         
+
+
+
+
+
+
+
+
+
+    </div> 
+
+</div>
+{% endblock content %}

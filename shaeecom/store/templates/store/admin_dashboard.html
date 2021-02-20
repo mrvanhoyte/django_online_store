@@ -1,0 +1,52 @@
+{% extends 'store/admin_main.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+          <div class="card-header">
+            Orders
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">List of Orders</h5>
+            <p class="card-text">View all orders</p>
+            <a href="{% url 'admin_dashboard_orders' %}" class="btn btn-primary">open</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="card">
+            <div class="card-header">
+              Orders
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">List of Orders</h5>
+              <p class="card-text">View all orders</p>
+              <a href="{% url 'admin_dashboard_orders' %}" class="btn btn-primary">open</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card">
+              <div class="card-header">
+                Orders
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">List of Orders</h5>
+                <p class="card-text">View all orders</p>
+                <a href="{% url 'admin_dashboard_orders' %}" class="btn btn-primary">open</a>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+  </div>  
+
+
+
+{% endblock content %} 
